@@ -6,7 +6,7 @@ Despite the vital role that blood transfusions play in healthcare, finding enoug
 
 ### Project Setup
 1. Clone the repository
-    ```git clone ```
+    ```git clone https://github.com/mr-palindrome/BloodRide.git```
 2. Get into the Folder and run Frontend
 
     ```
