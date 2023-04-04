@@ -1,0 +1,272 @@
+/* *******************
+COMMON FLEX
+******************* */
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* *******************
+COMMON DROPDOWN
+******************* */
+.dropdown {
+    img {
+        position: relative;
+        display: inline;
+        height: 100%;
+    }
+
+    div {
+        display: none;
+        right: 0;
+        top: 100%;
+        position: absolute;
+        background-color: white;
+        padding: 8px;
+        margin: 0px 1px;
+        box-shadow: 1px 1px 5px 0px black;
+        border-radius: 5px;
+    }
+
+    &:hover {
+        div {
+            display: block;
+        }
+    }
+}
+
+/* *******************
+NAV STYLING
+******************* */
+nav {
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    box-shadow: rgb(48, 47, 47) 0.1vw 0.1vw 2vw;
+    z-index: 9999;
+
+
+    /* *******************
+    LEFT 
+    ******************* */
+    #left {
+        display: flex;
+
+        img {
+            width: 300px;
+            padding: 0px 0px 0px 100px;
+        }
+    }
+
+    // *******************
+    // NAV APPEAR BUTTON
+    // *******************
+    #nav-button {
+        border: none;
+        background-color: transparent;
+        display: none;
+
+        img {
+            width: 40px;
+            height: 40px;
+            margin: 10px;
+        }
+    }
+
+    /* *******************
+    Right
+    ******************* */
+    #right {
+        #UserImg {
+            width: 40px;
+            height: 40px;
+            margin: 10px;
+        }
+
+        li {
+            padding: 10px 0px;
+            width: max-content;
+        }
+
+        a {
+            font-weight: 400;
+        }
+
+        #link {
+            background-color: transparent;
+            border: none;
+            border-radius: 5px;
+            padding: auto 5px;
+            display: flex;
+
+            img {
+                height: 40px;
+                width: 40px;
+                margin: 0px;
+            }
+
+            &:hover {
+                box-shadow: black 1px 1px 10px;
+            }
+
+            &:active {
+                transform: scale(0.9);
+            }
+        }
+    }
+
+    /* ******* */
+    /* Bless Us */
+    /* ******* */
+    #blessUs,
+    .signup-button {
+        padding: 5px 10px;
+        border-radius: 10px;
+        animation: blink 1.5s ease 0s infinite forwards;
+        &:hover {
+            animation: none;
+
+            &::before {
+                width: calc(100% - 20px);
+                height: calc(100% - 6px);
+            }
+        }
+    }
+
+
+    /* *******************
+    LINK/LIST STYLE
+    ******************* */
+    ul {
+        // height: 100%;
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+
+    li {
+        margin: 0px 10px;
+        display: flex;
+    }
+
+    a {
+        position: relative;
+        font-size: 20px;
+        text-decoration: none;
+        font-weight: 500;
+        color: black;
+        padding: 2px 0px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            border-bottom: 2px solid red;
+            transition: width 0.2s;
+        }
+
+        &:hover {
+            &::before {
+                width: 100%;
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        background-color: none;
+    }
+
+    50% {
+        background-color: red;
+    }
+}
+
+@media screen and (max-width:1300px) {
+    nav {
+        .flex {
+            flex-direction: column;
+        }
+
+        #nav-button {
+            display: block;
+        }
+
+        #left {
+            order: 1;
+
+            img {
+                width: 200px;
+                padding: 5px 0px 5px 10px;
+            }
+        }
+
+        #middle {
+            order: 3;
+            display: none;
+            width: 100%;
+            flex-basis: 100%;
+
+            ul {
+                li a {
+                    margin: 0px;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        #right {
+            order: 2;
+            flex-direction: row;
+
+            img {
+                margin: 0px !important;
+            }
+
+            #UserImg {
+                height: 50px;
+                width: 40px;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    nav {
+
+        #left {
+            img {
+                width: 180px;
+            }
+        }
+
+        #right {
+            img {
+                height: 35px !important;
+                width: 35px !important;
+            }
+
+            #dropdown-content {
+                top: 130%;
+            }
+        }
+    }
+}
+
+.signup-button{
+    border: none;
+    color:white;
+    font-size: 20px;
+    background-color: rgb(255, 190, 40);
+    .p{
+        color:white;
+    }
+}

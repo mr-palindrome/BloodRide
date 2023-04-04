@@ -1,0 +1,26 @@
+POST http://localhost:4000/app/signup
+Content-Type: application/json
+
+{
+    "fullname":"Harry",
+    "email":"harry123",
+    "username":"xyz@gmail.com",
+    "password":"123456"
+}
+
+POST http://localhost:4000/app/RaiseRequest
+{
+"componentRequired": "RBC",
+"contactAge": "22",
+"contactGender": "Female",
+"contactName": "Geeta Dorbi",
+"date": "2022-08-31",
+"hospitalAddress": "Garhwal colony, TCP Tekanpur",
+"hospitalName": "composite hospital",
+"patientAge": "18",
+"patientGender": "Male",
+"patientName": "Nayan Das",
+"profession": "Student",
+"reason": "Accident",
+"relation": "Sister"
+}

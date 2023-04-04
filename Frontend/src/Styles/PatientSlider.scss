@@ -1,0 +1,15 @@
+#patientSlider{
+    white-space: nowrap;
+    overflow: hidden;
+    #sliderContainer{    
+        animation: scroll 35s linear .5s infinite alternate;
+        &:hover{
+            animation-play-state: paused;
+        }
+    }
+    @keyframes scroll {
+        100%{
+            transform: translateX(-180%);
+        }
+    }
+}

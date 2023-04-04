@@ -1,0 +1,147 @@
+#QuickLinks {
+    position: absolute;
+    right: 0;
+    overflow-x: hidden;
+    width: 0vw;
+    height: max-content;
+    z-index: 200;
+
+    h1 {
+        font-size: 40px;
+        font-weight: bold;
+        padding-bottom: 5px;
+        width: max-content;
+    }
+
+    #heading {
+        width: 100%;
+
+        img {
+            width: 50px;
+        }
+    }
+
+    #container {
+        align-items: normal;
+        width: 100vw;
+        height: calc(100% - 60px);
+        padding: 0px 20px;
+        background-color: rgb(247, 2, 63);
+        box-shadow: inset rgb(0, 0, 0) -1px -1px 30px;
+        margin: 0px;
+
+        &>div {
+            display: flex;
+            flex-direction: column;
+            padding: 35px 30px;
+            width: calc(100vw/4);
+            a,
+            span {
+                padding: 10px 0px;
+                font-size: 17px;
+                color: white;
+                text-decoration: none;
+                max-width: max-content;
+                min-width: 50px;
+
+                &:hover {
+                    text-decoration: underline;
+                    transform: scale(1.1);
+                    z-index: 2;
+                }
+            }
+        }
+    }
+
+    #dropdown-content {
+        right: 0px;
+        max-width: max-content;
+
+        ul {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;   
+            a {
+                color: black;
+                font-size: 17px;
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+@keyframes entry {
+    100% {
+        width: 100vw;
+    }
+}
+
+@keyframes exit {
+    0% {
+        width: 100vw;
+    }
+
+    100% {
+        width: 0vw;
+    }
+}
+@media screen and (max-width:1500px) {
+    #QuickLinks{
+        #container{
+            &>div{
+                a,span{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1300px){
+    #QuickLinks{
+        #container{
+            flex-direction: column;
+            width: max-content;
+            &>div{
+                width: 50vw;
+                a,span{
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+    @keyframes entry {
+        100% {
+            width: max-content;
+        }
+    }
+    @keyframes exit {
+        0% {
+            width: max-content;
+        }
+
+        100% {
+            width: 0vw;
+        }
+    }
+}
+@media screen and (max-width:750px){
+    #QuickLinks{
+        #container{
+            width: 75vw;
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    #QuickLinks{
+        #container{
+            flex-direction: column;
+            width: max-content;
+            &>div{
+                width: 100vw;
+                a,span{
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+}

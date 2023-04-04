@@ -1,0 +1,149 @@
+#slideImage {
+    .flex {
+        justify-content: center;
+    }
+
+    overflow-y: hidden;
+
+    #container {
+        overflow-x: hidden;
+        padding: 20px;
+        box-shadow: black 10px 10px 20px;
+        border-radius: 10px;
+        margin: 25px auto;
+        width: 70vw;
+        min-height: 80vh;
+        height: max-content;
+
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        img {
+            height: 400px;
+            padding-right: 10px;
+        }
+
+        h1,
+        #inlineh1 {
+            color: red;
+            font-size: 50px;
+            margin-bottom: 0px;
+        }
+
+        h2,
+        #inlineh2 {
+            margin-bottom: 10px;
+            color: rgb(14, 14, 182);
+            font-size: 40px;
+        }
+
+        #inlinep,
+        #inlineh1,
+        #inlineh2 {
+            display: inline;
+        }
+
+        p,
+        #inlinep {
+            font-size: 20px;
+            font-weight: bold;
+            overflow-wrap: break-word;
+        }
+
+        button {
+            padding: 10px;
+            background-color: rgb(14, 14, 182);
+            color: white;
+            border-radius: 40px;
+            font-size: 20px;
+            font-weight: bolder;
+            border: 2px solid rgb(14, 14, 182);
+            &:hover {
+                background-color: white;
+                color: rgb(14, 14, 182);
+            }
+            .linkStyle{
+                &:focus, &:hover, &:visited, &:link, &:active {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #slideImage {
+        #container {
+            min-height: 70vh;
+            width: 80vw;
+            margin: 15px auto;
+
+            img {
+                height: 300px;
+                width: 300px;
+            }
+
+            h1,
+            #inlineh1 {
+                font-size: 40px;
+            }
+
+            h2,
+            #inlineh2 {
+                font-size: 30px;
+            }
+
+            p,
+            #inlinep {
+                font-size: 20px;
+            }
+
+            button {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:700px) {
+    #slideImage {
+        #container {
+            flex-wrap: wrap;
+            height: max-content;
+
+            * {
+                margin: 10px 0px;
+            }
+
+            img {
+                height: 300px;
+                width: 300px;
+            }
+
+            h1,
+            #inlineh1 {
+                font-size: 35px;
+            }
+
+            h2,
+            #inlineh2 {
+                font-size: 20px;
+            }
+
+            p,
+            #inlinep {
+                font-size: 18px;
+            }
+
+            button {
+                font-size: 15px;
+            }
+        }
+    }
+}
